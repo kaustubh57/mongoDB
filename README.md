@@ -1,6 +1,28 @@
 # Learning MongoDB
 
+## Commands
+- mongod
+- mongo
+- show dbs
+- mongoimport -d [???] -c users --file [FILE_NAME]
+- mongoexport -d [???] -c users --out [FILE_NAME]
+    - export db in json
+- mongodump
+    - binary export
+- mongorestore
+    - restore binary export
+- bsondump
+- mongostat
+
+
+### Notes
+- bson: binary JSON
+
+------------------
+
 http://code.tutsplus.com/courses/learning-mongodb
+
+## Contents
 
 1. Getting Started 4 lessons, 12:45
 

@@ -3,10 +3,9 @@
 ## Commands
 - `mongod` - start mongo db server instance
 - `mongo` - start mongo db command prompt to execute commands
-- `db.users.insert({"name":"username"})` - insert db user
 - `show dbs` - show databases
-- `mongoimport -d [???] -c users --file [FILE_NAME]` - 
-- `mongoexport -d [???] -c users --out [FILE_NAME]` - export db in json
+- `mongoimport -d [DATABASE_NAME] -c [COLLECTIONS] --file [FILE_NAME]` - import into database and collection from file 
+- `mongoexport -d [DATABASE_NEM] -c [COLLECTIONS] --out [FILE_NAME]` - export db in json
 - `mongodump` - binary export
 - `mongorestore` - restore binary export
 - `bsondump`
@@ -18,6 +17,19 @@
 - `db.[COLLECTIONS].insert({[JSON_DATA]})` - e.g. db.links.insert({title: "google search", url:"www.google.com", comment:"top search engine", tags:["default","main page"], saved_on: new Date()})
 - `db.[COLLECTIONS].save({[JSON_DATA]})` - e.g. db.links.save({title: "yahoo search", url: "www.yahoo.com", saved_on: new Date()})
 - `db.[COLLECTIONS].find()` - e.g. db.links.find(). Query the database to find the documents
+
+### Examples
+- `show collections` - show collections for db
+- `db.users.insert({"name":"username"})` - insert collection user with data
+- `db.users.count()` - show count of collections
+- `db.users.find()` - find all data from collection
+- `db.users.find().explain()` - explain execution planner for query to find data
+- `db.users.find().explain("executionStats")` - more information on explain
+- `db.users.createIndex({number:1})` - to create an index on collection
+- `db.users.update({"name":"username"}, $set: {"first_name":"Name"})"` - *$set* update record
+- `db.users.update({"name":"username"}, {$addToSet: {"hobbies":"running"}})"` - *$addToSet* update array with new value
+- `db.users.remove({"name":"username"})` - remove record
+- `db.users.drop()` - drop entire *users* collection
 
 ### Notes
 - bson: binary JSON

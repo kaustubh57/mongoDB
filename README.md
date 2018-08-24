@@ -1,47 +1,33 @@
 # Learning MongoDB
 
 ## Commands
-- mongod
-- mongo
-- show dbs
-- mongoimport -d [???] -c users --file [FILE_NAME]
-- mongoexport -d [???] -c users --out [FILE_NAME]
-    - export db in json
-- mongodump
-    - binary export
-- mongorestore
-    - restore binary export
-- bsondump
-- mongostat
-- use [DB_NAME]
-    - change/switch DB
-    - there is NO command to create DB
-- db
-    - set variable as DB (after *user [DB_NAME]*)
-- db.[COLLECTIONS]
-    - e.g. db.links
-    - don't have to create collections (similar to DB)
-- db.[COLLECTIONS].count()
-    - to check number of documents
-    - e.g. db.links.count()
-- db.[COLLECTIONS].insert({[JSON_DATA]})
-    - e.g. db.links.insert({title: "google search", url:"www.google.com", comment:"top search engine", tags:["default","main page"], saved_on: new Date()})
-- db.[COLLECTIONS].save({[JSON_DATA]})
-    - e.g. db.links.save({title: "yahoo search", url: "www.yahoo.com", saved_on: new Date()})
-- db.[COLLECTIONS].find()
-    - e.g. db.links.find()
-    - query the database to find the documents
+- `mongod` - start mongo db server instance
+- `mongo` - start mongo db command prompt to execute commands
+- `db.users.insert({"name":"username"})` - insert db user
+- `show dbs` - show databases
+- `mongoimport -d [???] -c users --file [FILE_NAME]` - 
+- `mongoexport -d [???] -c users --out [FILE_NAME]` - export db in json
+- `mongodump` - binary export
+- `mongorestore` - restore binary export
+- `bsondump`
+- `mongostat`
+- `use [DB_NAME]`- change/switch DB. There is NO command to create DB
+- `db` - set variable as DB (after *user [DB_NAME]*)
+- `db.[COLLECTIONS]` - e.g. db.links. Don't have to create collections (similar to DB)
+- `db.[COLLECTIONS].count()` - to check number of documents. e.g. db.links.count()
+- `db.[COLLECTIONS].insert({[JSON_DATA]})` - e.g. db.links.insert({title: "google search", url:"www.google.com", comment:"top search engine", tags:["default","main page"], saved_on: new Date()})
+- `db.[COLLECTIONS].save({[JSON_DATA]})` - e.g. db.links.save({title: "yahoo search", url: "www.yahoo.com", saved_on: new Date()})
+- `db.[COLLECTIONS].find()` - e.g. db.links.find(). Query the database to find the documents
 
 ### Notes
 - bson: binary JSON
 - Collection: Like an RDBMS table; but collection has no schemas.
 - Document: Like an RDBMS record or row. There are bson documents.
 - Field: Like an RDBMS column; {key: value}
-- 
 
 ------------------
 
-http://code.tutsplus.com/courses/learning-mongodb
+[http://code.tutsplus.com/courses/learning-mongodb]()
 
 ## Contents
 
